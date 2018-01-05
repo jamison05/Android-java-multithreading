@@ -1,0 +1,32 @@
+def event i,v,t
+	# This code assumes a path to a
+	# file is passed to the first input
+	# "rb" means read binary. You can
+	# also read a text file using "rt"
+	f = File.open(v,"rb")
+	buffer = f.read
+	output 0,buffer
+	output 1, buffer[6]
+	string1 = " "
+	buffer_c=",,"
+	for i in 0..buffer.length
+	string1 = buffer[i] + string1 	   
+	   output 1, string1
+	   if buffer[i] === "," || buffer_c ===",,"
+	   
+	   else()   
+	 	output 1, string1  
+	   end
+   
+	end
+end
+
+# multiply the input value by two
+output @in * 2
+
+def event i,v,t
+	# i = index or name of the input
+	# v = data value passed in
+	# t = time in seconds
+	output 0,v if i==0
+end
