@@ -1,24 +1,25 @@
 %a1 - acrylicbrush
 %Here I am going to put time into 
-fileID = fopen('scripttext_A2.dat','w');
+fileID = fopen('script_iteration1.txt','w');
 formatSpec = '%s';
+end_script_value = [12,27,27,27];
+short_test_listarray =[1,2,1,1,2]; 
 
+ui= ncols;
 
-[nrows,ncols] = size(thickacrylicbristle);
+[nrows,ncols] = size(getScript(short_test_listarray(1)));
         %pnt x  434.00 y  244.00 time 124282 prs 1.00 tlt 0.00 brg 0.00 whl 1.00 rot 0.00
         time =3; routine= 3; option =3;
         transfer_value = drawf1(time, routine,option);
-
         %There is not a direct way to create hardcoded spaces to strings without
         %sending it to a function.  
-   
-   location= cell(22,1);    
+        location= cell(22,1);    
    for i = 1:20   
         current_str = strcat('pnt x',char('-----'), num2str(transfer_value(1)),char('-----'), 'y', ...
         char('-----'), num2str(transfer_value(2)),char('-----'),'time ',char('-----'), num2str(time),char('-----'), 'prs',' ', num2str(1),char('-----'), ...
         ' tlt   0.00   brg   0.00   whl   1.00   rot   0.00');
         updatedString = regexprep(current_str, '-----', '      ');
-       location(i)=cell({updatedString}); 
+        location(i)= cell({updatedString}); 
     end
         %Here is the intro function
 
@@ -52,3 +53,5 @@ thickacrylicbristle(19)=cell({' '});
 %Will have to create different function files. 
 
 fclose(fileID);
+
+

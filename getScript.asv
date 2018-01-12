@@ -1,0 +1,22 @@
+function [ output_args ] = getScript( input_args )
+%In Matlscript_version_numberversion2ab this function returns the script of the ancillary program 
+%imported into a cell array. s
+
+switch input_args
+    case 1
+        openvardscript_version_numberversion1;
+        output_args=script_version_numberversion1;
+    case 2
+        output_args= script_version_numberversion2;
+    case 3 
+        output_args= script_version_numberversion3;
+    case 4 
+        output_args= script_version_numberversion4;
+    case 5
+        output_args= script_version_numberversion5;
+    case 6
+        output_args= script_version_numberversion6;
+    case 7    
+        output_args= script_version_numberversion7;
+end
+
